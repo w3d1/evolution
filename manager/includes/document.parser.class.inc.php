@@ -4882,7 +4882,7 @@ class DocumentParser {
     function cleanUpMODXTags($content='') {
         if ($this->minParserPasses < 1) return $content;
         
-        $content = $this->removeSanitizeSeed($content);
+        //$content = $this->removeSanitizeSeed($content);
         
         $enable_filter = $this->config['enable_filter'];
         $this->config['enable_filter'] = 1;
