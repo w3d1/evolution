@@ -466,6 +466,8 @@ class browser extends uploader
         if (is_array($evtOut) && !empty($evtOut)) {
             die(json_encode(array('error' => $evtOut)));
         }
+        
+        @unlink($file);
 
         $thumb = "{$this->thumbsTypeDir}/{$this->post['dir']}/{$this->post['file']}";
         if (file_exists($thumb)) {
